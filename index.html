@@ -10,51 +10,106 @@
           integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
           crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="src/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script type="text/javascript" src="src/script.js"></script>
     </head>
 
-    <body>
+    <body onload="init()">
+
+
+    <div class="home-text">
+      <b>WHEELS<br/>ON<br/>ROLL<br/></b>
+      <div class="home-tag">#YouRollWeCare</div>
+    </div>
+
+    <div class="navblocks">
+      <a href="!#" class="navblock">Services</a>
+      <a href="!#" class="navblock">In News</a>
+      <a href="!#" class="navblock">Milestones</a>
+      <a href="!#" class="navblock">Contact</a>
+    </div>
 
     <img src="images/wor_bg.jpg" class="bg">
 
-    <!--Services starts here-->
-    
-    <div class="container" id="services">
-
-      <h1 class="label">Services</h1>
-
-      <div class="row service">
-        <img class="col s12 m2 l2" src="images/rental.png"/>
-        <span class="col s12 m10 l10">
-        <h3 class="label">Automated Rental Services</h3>
-        Enhancing the cycling rental services by Digitally enabling Automated Cycle Rental Services alongwith advance locking Mechanism.
-        </span>
+    <div class="container center" style="margin-top: 40px;">
+      <h3>We have launched!!!</h3>
+      <div class="card center z-depth-5" style="display: inline-block;">
+        <div class="card-image center">
+          <img src="images/bangalore_mirror.jpg" style="height: 400px; width: auto">
+        </div>
       </div>
-      <div class="row service">
-        <img class="col s12 m2 l2" src="images/lease.png"/>
-        <span class="col s12 m10 l10">
-        <h3 class="label">Lease Services</h3>
-        Providing the cycles on lease to campus inmates for a stipulated time, flexible according to customer need.
-        </span>
+      <div class="news-links">
+        <div class="row">
+          <div class="col s12 m4 l4">
+            <a href="http://bangaloremirror.indiatimes.com/news/state/NITK-students-offer-cycle-sharing-service/articleshow/56577039.cms">
+              <img src="images/bangalore_mirror.png"/>
+            </a>
+          </div>
+          <div class="col s12 m4 l4">
+            <a href="http://timesofindia.indiatimes.com/city/mangaluru/wheels-on-roll-nit-karnataka-students-launch-bicycle-sharing-drive/articleshow/56586707.cms">
+              <img src="images/toi.png"/>
+            </a>
+          </div>
+          <div class="col s12 m4 l4">
+            <a href="http://www.thehindubusinessline.com/news/variety/book-a-bicycle-to-commute-in-campus-thanks-to-a-students-startup/article9483173.ece">
+              <img src="images/business_line.jpg"/>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <a href="http://www.nyoooz.com/mangalore/709193/wheels-on-roll-nitkarnataka-students-launch-bicycle-sharing-drive">
+              <img src="images/nyoooz.png"/>
+            </a>
+          </div>
+          <div class="col s12 m6 l6">
+            <a href="http://www.gadgetsnow.com/tech-news/wheels-on-roll-nit-karnataka-students-launch-bicycle-sharing-drive/articleshow/56591731.cms">
+              <img src="images/gadgets_now.png"/>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="row service">
-        <img class="col s12 m2 l2" src="images/events.png"/>
-        <span class="col s12 m10 l10">
-        <h3 class="label">Service for Events</h3>
-        Undertake easy to rent policy for events or activities of shorter duration.
-        </span>
-      </div>
-      <div class="row service">
-        <img class="col s12 m2 l2" src="images/repair.png"/>
-        <span class="col s12 m10 l10">
-        <h3 class="label">Repair Services</h3>
-        Providing mechanical assistance to all the cycles in the campus where in WOR customers enjoy added benefits
-        </span>
-      </div>
-
     </div>
 
-      <!--Service ends here -->
-      </body>
+    <!--Services starts here-->
+    <div class="container" id="services">
+      <div class="card">
+        <div class="card-content">
+          <h4 class="label">Services</h4>
+          <div class="row">
+            <div class="col s12 m1 l1"><img src="images/rental.png"/></div>
+            <span class="col s12 m11 l11">
+            <b>Automated Rental Services</b><br/>
+            Enhancing the cycling rental services by Digitally enabling Automated Cycle Rental Services alongwith advance locking Mechanism.
+            </span>
+          </div>
+          <div class="row">
+            <div class="col s12 m1 l1"><img src="images/lease.png"/></div>
+            <span class="col s12 m11 l11">
+            <b>Lease Services</b><br/>
+            Providing the cycles on lease to campus inmates for a stipulated time, flexible according to customer need.
+            </span>
+          </div>
+          <div class="row">
+            <div class="col s12 m1 l1"><img src="images/events.png"/></div>
+            <span class="col s12 m11 l11">
+            <b>Service for Events</b><br/>
+            Undertake easy to rent policy for events or activities of shorter duration.
+            </span>
+          </div>
+          <div class="row">
+            <div class="col s12 m1 l1"><img src="images/repair.png"/></div>
+            <span class="col s12 m11 l11">
+            <b>Repair Services</b><br/>
+            Providing mechanical assistance to all the cycles in the campus where in WOR customers enjoy added benefits
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
 
 </html>
