@@ -126,3 +126,11 @@ body{
 	height: 50px !important;
 	margin: 10px !important;
 }
+
+.timeline-content .card-title {
+	line-height: 1 !important;
+}
+
+.timeline-content p {
+	padding-top: 10px;
+}
