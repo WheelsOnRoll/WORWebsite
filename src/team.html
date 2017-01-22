@@ -1,51 +1,43 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Wheels On Roll</title>
-        <script
-          src="https://code.jquery.com/jquery-3.1.1.min.js"
-          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-          crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-        <title>Wheels On Roll</title>
-        
-        <script type="text/javascript" src="js/team.json"></script>
-        <script type="text/javascript">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Wheels On Roll</title>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <title>Wheels On Roll</title>
+  
+  <script type="text/javascript" src="js/team.json"></script>
+  <script type="text/javascript">
 
-          function get_model(member){
-            var model = "";// = '<h3 class="label">'+member.position+'</h3>';
-            // model += '<div class = "images">';
-            // model += '<img src="'+member.image+'"/>';
-            // model += '<a href="'+member.linkedin+'"><img src="../images/logo_linkedin.png" id="social-media-linkedin"></a>';
-            // model += '<a href="'+member.facebook+'"><img src="../images/logo_fb.png" id="social-media-fb"></a></div>';
-            // model += '<div style="padding-top: 4%;">'+member.name+'</div>';
-            // model += '<div style="padding-top: 2%;">'+member.mobile+'</div>';
-            // model += '<div style="padding-top: 2%;padding-bottom: 2%;"><a href="mailto:'+member.email+'">'+member.email+'</a></div>';
+  function get_model(member){
+    var model = "";
+    model += '<div class="team-member col s12 m6 l6"><div class="card center-align">';
+    model += '<div class="card-content">';
+    model += '<div class="team-member-bg green"></div>';
+    model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
+    model += '<h4>'+member.name+'</h4>';
+    model += member.position+'<br/><br/>';
+    model += member.email+'<br/>';
+    model += member.mobile+'<br/>';
+    model += '<div class="row">';
+    model += '<a href="'+member.linkedin+'"><img src="../images/logo_linkedin.png" id="social-media"></a>';
+    model += '<a href="'+member.linkedin+'"><img src="../images/logo_fb.png" id="social-media"></a>'
+    model += '</div></div></div>';
 
-            model += '<div class="team-member col s12 m6 l6"><div class="card center-align">';
-            model += '<div class="card-content">';
-            model += '<div class="team-member-bg green"></div>';
-            model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
-            model += '<h4>'+member.name+'</h4>';
-            model += member.position+'<br/><br/>';
-            model += member.email+'<br/>';
-            model += member.mobile+'<br/>';
-            model += '<div class="row">';
-            model += '<a href="'+member.linkedin+'"><img src="../images/logo_linkedin.png" id="social-media"></a>';
-            model += '<a href="'+member.linkedin+'"><img src="../images/logo_fb.png" id="social-media"></a>'
-            model += '</div></div></div>';
+    return model;
+  }
 
-            return model;
-          }
-
-          function load_members(){
-            var gallery_container = document.getElementById("gallery");
+  function load_members(){
+    var gallery_container = document.getElementById("gallery");
             // Core members
             var gallery_row;
             gallery_container.innerHTML += '<h2 class="label">Core Team</h2>';
@@ -73,27 +65,27 @@
             }
           }
 
-        </script>
+          </script>
 
-  </head>
-  <body onload="init();load_members();"><center>
+        </head>
+        <body onload="init();load_members();"><center>
 
-    <div class="bg" style="margin-bottom: 10px !important;"><img src="../images/wor_bg.jpg"></div>
+          <div class="bg" style="margin-bottom: 10px !important;"><img src="../images/wor_bg.jpg"></div>
 
-    <div class="home-text left-align">
-      <b>WHEELS<br/>ON<br/>ROLL<br/></b>
-      <div class="home-tag">#YouRollWeCare</div>
-    </div>
+          <div class="home-text left-align">
+            <b>WHEELS<br/>ON<br/>ROLL<br/></b>
+            <div class="home-tag">#YouRollWeCare</div>
+          </div>
 
-    <div class="navblocks">
-      <a href="!#" class="navblock">Services</a>
-      <a href="!#" class="navblock">In News</a>
-      <a href="!#" class="navblock">Milestones</a>
-      <a href="!#" class="navblock">Contact</a>
-    </div>
+          <div class="navblocks">
+            <a href="../index.html" class="navblock">Home</a>
+            <a href="team.html" class="navblock">Team</a>
+            <a href="timeline.html" class="navblock">Timeline</a>
+            <a href="contact.html" class="navblock">Contact Us</a>
+          </div>
 
-    <div class="container" id="gallery">
-    </div>
+          <div class="container" id="gallery">
+          </div>
 
-</center></body>
-</html>
+        </center></body>
+        </html>
