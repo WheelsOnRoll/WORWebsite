@@ -1,106 +1,99 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-
 <head>
-  <link href="css/team.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <title>Wheels On Roll</title>
-  
-  <script type="text/javascript" src="js/team.json"></script>
-  <script type="text/javascript">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Wheels On Roll</title>
+        <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <title>Wheels On Roll</title>
+        
+        <script type="text/javascript" src="js/team.json"></script>
+        <script type="text/javascript">
 
-  function get_model(member){
-    var model = '<h3 class="label">'+member.position+'</h3>';
-    model += '<div class = "images">';
-    model += '<img src="'+member.image+'"/>';
-    model += '<a href="'+member.linkedin+'"><img src="../images/logo_linkedin.png" id="social-media-linkedin"></a>';
-    model += '<a href="'+member.facebook+'"><img src="../images/logo_fb.png" id="social-media-fb"></a></div>';
-    model += '<div style="padding-top: 4%;">'+member.name+'</div>';
-    model += '<div style="padding-top: 2%;">'+member.mobile+'</div>';
-    model += '<div style="padding-top: 2%;padding-bottom: 2%;"><a href="mailto:'+member.email+'">'+member.email+'</a></div>';
-    return model;
-  }
+          function get_model(member){
+            var model = "";// = '<h3 class="label">'+member.position+'</h3>';
+            // model += '<div class = "images">';
+            // model += '<img src="'+member.image+'"/>';
+            // model += '<a href="'+member.linkedin+'"><img src="../images/logo_linkedin.png" id="social-media-linkedin"></a>';
+            // model += '<a href="'+member.facebook+'"><img src="../images/logo_fb.png" id="social-media-fb"></a></div>';
+            // model += '<div style="padding-top: 4%;">'+member.name+'</div>';
+            // model += '<div style="padding-top: 2%;">'+member.mobile+'</div>';
+            // model += '<div style="padding-top: 2%;padding-bottom: 2%;"><a href="mailto:'+member.email+'">'+member.email+'</a></div>';
+            
+            model += '<div class="team-member col s12 m6 l6"><div class="card center-align">';
+            model += '<div class="card-content">';
+            model += '<div class="team-member-bg green"></div>';
+            model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
+            model += '<h4>'+member.name+'</h4>';
+            model += member.position+'<br/><br/>';
+            model += member.email+'<br/>';
+            model += member.mobile+'<br/>';
+            model += '<div class="row">';
+            model += '<a href="'+member.linkedin+'"><img src="../images/logo_linkedin.png" id="social-media"></a>';
+            model += '<a href="'+member.linkedin+'"><img src="../images/logo_fb.png" id="social-media"></a>'
+            model += '</div></div></div>';
 
-  function load_members(){
-    var gallery_container = document.getElementById("gallery");
-    // Core members
-    var gallery_row;
-    gallery_container.innerHTML += '<h2 class="label">Core Team</h2>';
-    for(var i=0;i<core_members.length;i++){
-      if(i%2==0){
-        gallery_container.innerHTML += '<div class="gallery-row" id="core-gallery-row-'+i+'"></div>';
-        gallery_row = document.getElementById('core-gallery-row-'+i);
-      }
-      var member = core_members[i];
-      gallery_row.innerHTML += '<div class="gallery" id="core-member-'+i+'"></div>';
-      var member_container = document.getElementById('core-member-'+i);
-      member_container.innerHTML += get_model(member);
-    }
-    // Tech Members
-    gallery_container.innerHTML += '<h2 class="label">Tech Team</h2>';
-    for(var i=0;i<tech_members.length;i++){
-      if(i%2==0){
-        gallery_container.innerHTML += '<div class="gallery-row" id="tech-gallery-row-'+i+'"></div>';
-        gallery_row = document.getElementById('tech-gallery-row-'+i);
-      }
-      var member = tech_members[i];
-      gallery_row.innerHTML += '<div class="gallery" id="tech-member-'+i+'"></div>';
-      var member_container = document.getElementById('tech-member-'+i);
-      member_container.innerHTML += get_model(member);
-    }
-  }
-  </script>
-  <script type="text/javascript" src="../src/script.js"></script>
-  <link rel="shortcut icon" href="../favicon.ico">
-</head>
+            return model;
+          }
 
-<body onload="load_members()"><center>
+          function load_members(){
+            var gallery_container = document.getElementById("gallery");
+            // Core members
+            var gallery_row;
+            gallery_container.innerHTML += '<h2 class="label">Core Team</h2>';
+            for(var i=0;i<core_members.length;i++){
+              if(i%2==0){
+                gallery_container.innerHTML += '<div class="row" id="core-gallery-row-'+i+'"></div>';
+                gallery_row = document.getElementById('core-gallery-row-'+i);
+              }
+              var member = core_members[i];
+              gallery_row.innerHTML += '<div class="gallery" id="core-member-'+i+'"></div>';
+              var member_container = document.getElementById('core-member-'+i);
+              member_container.innerHTML += get_model(member);
+            }
+            // Tech Members
+            gallery_container.innerHTML += '<h2 class="label">Tech Team</h2>';
+            for(var i=0;i<tech_members.length;i++){
+              if(i%2==0){
+                gallery_container.innerHTML += '<div class="row" id="tech-gallery-row-'+i+'"></div>';
+                gallery_row = document.getElementById('tech-gallery-row-'+i);
+              }
+              var member = tech_members[i];
+              gallery_row.innerHTML += '<div class="gallery" id="tech-member-'+i+'"></div>';
+              var member_container = document.getElementById('tech-member-'+i);
+              member_container.innerHTML += get_model(member);
+            }
+          }
 
-  <header>
-    <div class="head-container">
-      <a href="#" id="logo"><h1>Wheels On Roll</h1></a>
-      <nav>
-        <a id="menu-icon"><img src="../images/menu-icon.png"></a>
-        <ul>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#services">Services</a></li>
-          <li><a href="#">Team</a></li>
-        </ul>
-      </nav>
+        </script>
+
+  </head>
+  <body onload="init();load_members();"><center>
+
+    <div class="bg" style="height: 100% !important;"><img src="../images/wor_bg.jpg"></div>
+
+    <div class="home-text left-align">
+      <b>WHEELS<br/>ON<br/>ROLL<br/></b>
+      <div class="home-tag">#YouRollWeCare</div>
     </div>
-  </header>
 
-  <div class="container" id="gallery">
-  </div>
-
-  <div class="footer">
-    <div class="container" id="about">
-      <div class="navi">
-        <ul>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#services">Services</a></li>
-          <li><a href="#">Team</a></li>         
-          <li><a href="javascript:window.scroll({top:0, behavior:'smooth'})">Top</a></li>
-        </ul>
-      </div>
-      <div class="about">
-        <h4>Wheels On Roll</h4>
-        <p>WOR - Office, STEP - NITK Beach Road, Western Campus,</p>
-        <p>NITK, Surathkal, Mangalore - 575025</p>
-        <p>An NITK Startup</p>
-        <p>Our</p>
-
-        <p><a href="https://www.facebook.com/Wheelsonroll"><img src="../images/logo_fb_white.png" height="40px" /></a></p>
-      </div>
+    <div class="navblocks">
+      <a href="!#" class="navblock">Services</a>
+      <a href="!#" class="navblock">In News</a>
+      <a href="!#" class="navblock">Milestones</a>
+      <a href="!#" class="navblock">Contact</a>
     </div>
-  </div>
+    
+    <div class="container" id="gallery">
+    </div>
 
 </center></body>
 </html>

@@ -79,9 +79,9 @@ body{
 	-webkit-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out;
 	transition: all .3s ease-out;
-	/*-webkit-filter: grayscale(1);
+	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
-	opacity: 0.8;*/
+	opacity: 0.8;
 }
 
 .news-links img:hover {
@@ -94,4 +94,39 @@ body{
 	display: block;
 	float: center;
 	height: 50px;
+}
+
+#gallery {
+	padding-top: 30px;
+}
+
+#gallery .row {
+	margin-bottom: 0 !important;
+}
+
+.team-member {
+	display: block;
+	padding: 5px !important;
+}
+
+.team-member .card-content {
+	padding: 10px;
+}
+
+.team-member-bg {
+	width: 100%;
+	height: 100px;
+	margin-bottom: -60px;
+}
+
+.team-member img {
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+}
+
+.team-member #social-media {
+	width: 50px !important;
+	height: 50px !important;
+	margin: 10px !important;
 }
