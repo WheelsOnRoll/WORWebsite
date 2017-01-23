@@ -143,6 +143,15 @@ body{
 	min-height: 100%;
 }
 
+.sending-mail {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	margin: 0;
+}
+
 @media only screen and (max-width : 720px) {
 
 	.bg {
