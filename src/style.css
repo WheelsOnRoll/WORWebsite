@@ -143,6 +143,11 @@ body{
 	min-height: 100%;
 }
 
+.member img {
+	width: 100%;
+	padding: 5px;
+}
+
 @media only screen and (max-width : 720px) {
 
 	.bg {
