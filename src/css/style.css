@@ -32,7 +32,7 @@ body{
 	font-size: 4em;
 }
 
-.home-text, .navblocks {
+.home-text, .navblocks, .container {
 	opacity: 0;
 	margin-top: -10px;
 	-webkit-transition: all .3s ease-out;
