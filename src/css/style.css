@@ -12,7 +12,7 @@ body{
 	margin-bottom: -10%;
 	overflow: hidden;
 	z-index: 0 !important;
-	background-image: url(../images/wor_bg.jpg);
+	background-image: url(../../images/wor_bg.jpg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
@@ -32,7 +32,7 @@ body{
 	font-size: 4em;
 }
 
-.home-text, .navblocks {
+.home-text, .navblocks, .container {
 	opacity: 0;
 	margin-top: -10px;
 	-webkit-transition: all .3s ease-out;
@@ -143,6 +143,27 @@ body{
 	min-height: 100%;
 }
 
+.slider {
+	height: auto !important;
+}
+
+.slider .slides, .slider li, .photos {
+	max-height: 57vw !important;
+}
+
+.sending-mail {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	margin: 0;
+}
+
+.member {
+	padding: 10px !important;
+}
+
 .member img {
 	width: 100%;
 	padding: 5px;
@@ -153,7 +174,7 @@ body{
 	.bg {
 		width: 100%;
 		height: 134vw;
-		background-image: url(../images/wor_bg_mob.jpg);
+		background-image: url(../../images/wor_bg_mob.jpg);
 	}
 
 	.home-text {
@@ -162,6 +183,10 @@ body{
 
 	.navblocks {
 		display: none;
+	}
+
+	#services {
+		text-align: center;
 	}
 
 	#services span {
@@ -176,7 +201,6 @@ body{
 
 	.container {
 		width: 100% !important;
-		padding: 10px;
 	}
 
 }
