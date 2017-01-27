@@ -143,6 +143,14 @@ body{
 	min-height: 100%;
 }
 
+.slider {
+	height: 57vw !important;
+}
+
+.slider .slides,  .slider li, .photos {
+	max-height: 57vw !important;
+}
+
 .sending-mail {
 	position: absolute;
 	top: 0;
@@ -162,10 +170,14 @@ body{
 
 	.home-text {
 		font-size: 13vw;
-	}
+	}`
 
 	.navblocks {
 		display: none;
+	}
+
+	#services {
+		text-align: center;
 	}
 
 	#services span {
