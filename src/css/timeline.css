@@ -8,11 +8,16 @@
   position: relative;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin: 10px;
 }
 
 .timeline .timeline-event .timeline-content {
   position: relative;
   width: calc(50% - 50px);
+}
+
+.timeline-event .card {
+  text-align: left;
 }
 
 .timeline .timeline-event::before {
