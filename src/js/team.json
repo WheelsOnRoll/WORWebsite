@@ -53,7 +53,7 @@ var tech_members = [
         "mobile": "+91 8147298166",
         "email": "hrishihiraskar@gmail.com",
         "facebook": "https://www.facebook.com/hrishi.hiraskar7",
-        "linkedin":  "www.linkedin.com/in/hrishi-hiraskar",
+        "linkedin":  "https://www.linkedin.com/in/hrishi-hiraskar",
         "image": "../images/team_hrishi.jpg"
     },
     {
@@ -71,7 +71,7 @@ var tech_members = [
         "mobile": "+91 98198 35261",
         "email": "rohanbfg@gmail.com",
         "facebook": "https://m.facebook.com/rohan.surve.946?ref=bookmarks",
-        "linkedin":  "",
+        "linkedin":  "https://in.linkedin.com/in/rohan-surve-838191121",
         "image": "../images/team_rohan.jpg"
 
     },
