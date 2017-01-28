@@ -6,7 +6,7 @@ function init(){
 		$('.materialboxed').materialbox();
 		$('.slider').slider({indicators: false, transition: 1000, interval: 4000});
 		$('.slider').slider('start');
-	}, 1000);
+	}, 100);
 }
 var url = 'https://script.google.com/macros/s/AKfycbytrKHv5A3eUMBuN-SwT0o8ZBPy05cg-4mTQULBVjlAhb2he18/exec';
 
