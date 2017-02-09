@@ -6,7 +6,7 @@ var core_members = [
         "email": "pratyushgr@gmail.com",
         "facebook": "https://www.facebook.com/pratyushgr777",
         "linkedin":  "https://in.linkedin.com/in/pratyush-giri-420280119",
-        "image": "../images/team_pratyush.jpg"
+        "image": "images/team_pratyush.jpg"
     },
     {
         "name": "Piyush Bansal",
@@ -15,7 +15,7 @@ var core_members = [
         "email": "bansalpiyush456@gmail.com",
         "facebook": "https://www.facebook.com/piyush.bansal.547389",
         "linkedin":  "https://in.linkedin.com/in/piyush-bansal-48b55211b",
-        "image": "../images/team_piyush.jpg"
+        "image": "images/team_piyush.jpg"
     },
     {
         "name": "Amartya Gupta",
@@ -24,7 +24,7 @@ var core_members = [
         "email": "marty11g@gmail.com",
         "facebook": "https://www.facebook.com/amartya.gupta.1",
         "linkedin":  "https://in.linkedin.com/in/amartya-gupta-26b351120",
-        "image": "../images/team_amartya.jpg"
+        "image": "images/team_amartya.jpg"
     },
     {
         "name": "Jeshventh Raja T K",
@@ -33,7 +33,7 @@ var core_members = [
         "email": "jeshventhrajatk@gmail.com",
         "facebook": "https://www.facebook.com/jeshventh",
         "linkedin":  "https://in.linkedin.com/in/jeshventh-raja-t-k-7b2791131",
-        "image": "../images/team_jeshventh.jpg"
+        "image": "images/team_jeshventh.jpg"
     }
 ]
 
@@ -45,7 +45,7 @@ var tech_members = [
         "email": "trmittal24@gmail.com",
         "facebook": "https://www.facebook.com/trmittal",
         "linkedin":  "http://www.linkedin.com/trmittal24",
-        "image": "../images/team_tarun.jpg"
+        "image": "images/team_tarun.jpg"
     },
     {
         "name": "Hrishi Hiraskar",
@@ -54,7 +54,7 @@ var tech_members = [
         "email": "hrishihiraskar@gmail.com",
         "facebook": "https://www.facebook.com/hrishi.hiraskar7",
         "linkedin":  "https://www.linkedin.com/in/hrishi-hiraskar",
-        "image": "../images/team_hrishi.jpg"
+        "image": "images/team_hrishi.jpg"
     },
     {
         "name": "Salman Shah",
@@ -63,7 +63,7 @@ var tech_members = [
         "email": "sbs.191197@gmail.com",
         "facebook": "https://www.facebook.com/salman.shah.92775",
         "linkedin": "https://www.linkedin.com/in/sbshah97",
-        "image": "../images/team_salman.jpg"
+        "image": "images/team_salman.jpg"
     },
     {
         "name": "Rohan Surve",
@@ -72,7 +72,7 @@ var tech_members = [
         "email": "rohanbfg@gmail.com",
         "facebook": "https://m.facebook.com/rohan.surve.946?ref=bookmarks",
         "linkedin":  "https://in.linkedin.com/in/rohan-surve-838191121",
-        "image": "../images/team_rohan.jpg"
+        "image": "images/team_rohan.jpg"
 
     },
     {
@@ -82,16 +82,16 @@ var tech_members = [
         "email": "chowdhury.mohita@gmail.com",
         "facebook": "https://www.facebook.com/mohiitaa.chawdhry",
         "linkedin":  "https://www.linkedin.com/in/mohita-chowdhury-838643131",
-        "image": "../images/team_mohiita.jpg"
+        "image": "images/team_mohiita.jpg"
     },
     {
         "name": "Santosh Kodali",
-        "position": "Product and app developer",
+        "position": "Product and App developer",
         "mobile": "+91 95918 20035",
         "email": "santoshkvk@gmail.com",
         "facebook": "https://www.facebook.com/santosh.kodali",
         "linkedin": "https://in.linkedin.com/in/santosh-kodali-ba681b136",
-        "image": "../images/team_santosh.jpg"
+        "image": "images/team_santosh.jpg"
     },
     {
         "name": "Abhishek Thigale",
@@ -100,7 +100,7 @@ var tech_members = [
         "email": "abhithigale3@gmail.com",
         "facebook": "https://www.facebook.com/abhi.thigale.3",
         "linkedin": "https://in.linkedin.com/in/abhishek-thigale-290b18116",
-        "image": "../images/team_abhishek.jpg"
+        "image": "images/team_abhishek.jpg"
     }
 ]
     
