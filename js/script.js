@@ -1,19 +1,20 @@
 function init(){
-	$(function(){$('.header').load('header.html')});
-	$(function(){$('.footer').load('footer.html')});
-	setTimeout(function(){
-		$('.home-text').css({'margin-top': '0', 'opacity': '1'});
-		$('.navblocks').css({'margin-top': '0', 'opacity': '1'});
-		$('.container').css({'margin-top': '0', 'opacity': '1'});
-		$('.materialboxed').materialbox();
-		$('.slider').slider({indicators: false, transition: 1000, interval: 4000});
-		$('.slider').slider('start');
-		menu_ic = document.getElementsByClassName('menu_ic')[0];
-		menu_ic.onclick = menu_handler;
-	}, 100);
-	
+	$(function(){
+		$('.header').load('header.html');
+		$('.footer').load('footer.html');
+		setTimeout(function(){
+			$('.home-text').css({'margin-top': '0', 'opacity': '1'});
+			$('.navblocks').css({'margin-top': '0', 'opacity': '1'});
+			$('.container').css({'margin-top': '0', 'opacity': '1'});
+			$('.materialboxed').materialbox();
+			$('.slider').slider({indicators: false, transition: 1000, interval: 4000});
+			$('.slider').slider('start');
+			$('.menu_ic').on('click', menu_handler);
+		}, 100);
+	});
 	
 }
+
 var url = 'https://script.google.com/macros/s/AKfycbytrKHv5A3eUMBuN-SwT0o8ZBPy05cg-4mTQULBVjlAhb2he18/exec';
 
 function validateEmail(email) {
@@ -72,8 +73,8 @@ function menu_handler() {
 	menu_container = (document.getElementsByClassName('menu-container'))[0];
 	menu_contents = (document.getElementsByClassName('menu-contents'))[0];
 	$('.home-text').css({'display': 'none'});
-	
 	menu_container.style.display = 'inherit';
+	menu_contents.style.display = 'inherit';
 	var menu_t = document.createElement('div');
 	menu_t.className = 'menu';
 	menu_container.appendChild(menu_t);
@@ -86,8 +87,7 @@ function menu_handler() {
 	menu.style.right = y-25+'px';
 	 $(function(){menu.style.transform = 'scale(20)';});
 	
-	close = (document.getElementsByClassName('close'))[0];
-	close.onclick = close_menu;
+	$('.close').on('click', close_menu);
 	
 	setTimeout(function() {
 		menu_container.style.backgroundColor= '#fff';
@@ -109,7 +109,6 @@ function close_menu() {
 	menu.style.transform = 'scale(1)';
 	setTimeout(function() {
 		menu_container.style.display = 'none';
-		menu_container.removeChild(menu);
-		
+		$('.menu').remove();
 	}, 300);		
 }
