@@ -1,6 +1,6 @@
 function init(){
-	$('.header').load('header.html');
-	$('.footer').load('footer.html');
+	$(function(){$('.header').load('header.html')});
+	$(function(){$('.footer').load('footer.html')});
 	setTimeout(function(){
 		$('.home-text').css({'margin-top': '0', 'opacity': '1'});
 		$('.navblocks').css({'margin-top': '0', 'opacity': '1'});
