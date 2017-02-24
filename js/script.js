@@ -31,7 +31,7 @@ function sendMail(){
 	var name = $('#name').val();
 	var email = $('#email').val();
 	var msg = $('#msg').val();
-	if(name.lenght==0 || email.lenght==0 || msg.length==0){
+	if(name.length==0 || email.length==0 || msg.length==0){
 		Materialize.toast("Please fill all the details!", 3000 );
 		return;
 	}
