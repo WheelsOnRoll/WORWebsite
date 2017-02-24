@@ -186,6 +186,11 @@ a.portfolio-link {
   top: 0;
 }
 
+.card-content
+{
+  font-style: "Franklin Gothic Book" ;
+  font-size: 1.5em;
+}
 .timeline .timeline-event::after {
   display: block;
   content: "";
