@@ -32,7 +32,7 @@
     model += '<div class="card-content">';
     model += '<div class="team-member-bg green"></div>';
     model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
-    model += '<h6>'+member.name+'</h6>';
+    model += '<h6><b>'+member.name+'</b></h6>';
     model += '<div class="team-member-info">'
     model += member.position+'<br/><br/>';
     model += member.email+'<br/>';
@@ -58,15 +58,13 @@
       var member_container = document.getElementById('core-member-'+i);
       member_container.innerHTML += get_model(member);
     }
+    gallery_container.innerHTML += '<div class="center button-container"><a class="prev-core btn-floating btn-large waves-effect waves-light green"><i class="material-icons">chevron_left</i></a>';
+    gallery_container.innerHTML += '<a class="next-core btn-floating btn-large waves-effect waves-light green"><i class="material-icons">chevron_right</i></a></div>';
     // Tech Members
     gallery_container.innerHTML += '<h2 class="label">Tech Team</h2>';
     gallery_container.innerHTML += '<div  id="tech-gallery-row"></div>';
     gallery_row = document.getElementById('tech-gallery-row');
     for(var i=0;i<tech_members.length;i++){
-      // if(i%4==0) {
-      //   gallery_container.innerHTML += '<div class="carousel-item" id="member-item-'+i+'"></div>';
-      //   gallery_row = document.getElementById('member-item-'+i);
-      // }
       var member = tech_members[i];
       gallery_row.innerHTML += '<div class="gallery" id="tech-member-'+i+'"></div>';
       var member_container = document.getElementById('tech-member-'+i);
@@ -84,8 +82,8 @@
 
     <div class="team-container" id="gallery">
     </div>
-    <i class="prev material-icons">chevron_left</i>
-    <i class="next material-icons">chevron_right</i>
+    <a class="btn-floating btn-large waves-effect waves-light green"><i class="prev material-icons">chevron_left</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light green"><i class="next material-icons">chevron_right</i></a>
   
   </center>
 

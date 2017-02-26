@@ -154,11 +154,10 @@ body{
 #tech-gallery-row {
 	margin-left: 0%;
 	display: flex;
-	/*height: 275px;*/
 	width: 80%;
 	overflow-x: scroll;
-	transition: scroll .4s ease-in-out;
-	/*overflow-y: hidden;*/
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
 }
 
 #tech-gallery-row::-webkit-scrollbar, #core-gallery-row::-webkit-scrollbar {
@@ -182,6 +181,9 @@ body{
 	-webkit-transition: all .4s ease-in-out;
 }
 
+.next-core, .prev-core {
+	display: none;
+}
 
 .timeline-content .card-title {
 	line-height: 1 !important;
@@ -332,5 +334,13 @@ body{
 
 	.team-member {
 		width: 80vw;
+	}
+	
+	.next-core, .prev-core {
+		display: inline-block;
+	}
+
+	.button-container {
+		display: inline-block;
 	}
 }

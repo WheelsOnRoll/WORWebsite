@@ -107,7 +107,9 @@ function menu_handler() {
 
 	menu.style.top = y-25+'px';
 	menu.style.right = y-25+'px';
-	 $(function(){menu.style.transform = 'scale(20)';});
+	setTimeout(function(){
+		$(function(){menu.style.transform = 'scale(20)';});
+	}, 10);
 	
 	$('.close').on('click', close_menu);
 	
@@ -137,12 +139,12 @@ function close_menu() {
 
 var cardTop;
 var cardLeft;
-var nextMember;
-var prevMember;
 
 function initializeTeamMembers() {
 	$('.next').on('click', goToNextMember);
 	$('.prev').on('click', goToPreviousMember);
+	$('.next-core').on('click', goToNextCore);
+	$('.prev-core').on('click', goToPrevCore);
 	nextMember = 4;
 	prevMember = tech_members.length-1;
 	var ids = "#core-member-";
@@ -211,7 +213,7 @@ function displayMemberInfo() {
 		});
 		setTimeout(function(){
 			$('.expandable-card').find('.team-member-info').css('display', 'inherit');
-		}, 400);
+		}, 300);
 	});
 	}, 10);
 	$('.expandable-card').on('click', closeMember);
@@ -229,7 +231,6 @@ function closeMember() {
 			top: cardTop,
 			left: cardLeft
 		});
-		$(function(){$('expandable-card').css('opacity', '0');});
 		setTimeout(function(){
 			$('.expandable-card-contents').remove();
 			$('.expandable-card').remove();
@@ -238,49 +239,60 @@ function closeMember() {
 }
 
 function goToNextMember() {
-	if(nextMember == 4){
-		prevMember = 1;
-	}
-	if(nextMember == 1){
-		nextMember =4;
-		var nextEl = document.getElementById('tech-member-'+nextMember);
-		nextEl.scrollIntoView({behavior: 'smooth'});
-		nextMember++;
-		prevMember =0;
-	} else if(nextMember < tech_members.length){
-		var nextEl = document.getElementById('tech-member-'+nextMember);
-		nextEl.scrollIntoView({behavior: 'smooth'});
-		nextMember++;
-		prevMember--;
-	} else {
-		nextMember = 0;
-		var nextEl = document.getElementById('tech-member-'+nextMember);
-		nextEl.scrollIntoView({behavior: 'smooth'});
-		nextMember++;
-		prevMember = tech_members.length;
-	}
+	$('#tech-gallery-row').animate({scrollLeft: $('#tech-gallery-row').scrollLeft() + $('.team-member').width() + 10}, 500);
+	// $(function(){document.getElementById('tech-gallery-row').scrollLeft += $('.team-member').width();});
+	// if(nextMember == 4){
+	// 	prevMember = 1;
+	// }
+	// if(nextMember == 1){
+	// 	nextMember =4;
+	// 	var nextEl = document.getElementById('tech-member-'+nextMember);
+	// 	nextEl.scrollIntoView({behavior: 'smooth'});
+	// 	nextMember++;
+	// 	prevMember =0;
+	// } else if(nextMember < tech_members.length){
+	// 	var nextEl = document.getElementById('tech-member-'+nextMember);
+	// 	nextEl.scrollIntoView({behavior: 'smooth'});
+	// 	nextMember++;
+	// 	prevMember--;
+	// } else {
+	// 	nextMember = 0;
+	// 	var nextEl = document.getElementById('tech-member-'+nextMember);
+	// 	nextEl.scrollIntoView({behavior: 'smooth'});
+	// 	nextMember++;
+	// 	prevMember = tech_members.length;
+	// }
 }
 
 function goToPreviousMember() {
-	if(prevMember == tech_members.length-1){
-		nextMember = -1;
-	}
-	if(prevMember == tech_members.length -2){
-		prevMember = tech_members.length - 4;
-		var prevEl = document.getElementById('tech-member-'+prevMember);
-		prevEl.scrollIntoView();
-		prevMember--;
-		nextMember++;
-	} else if(prevMember >= 0){
-		var prevEl = document.getElementById('tech-member-'+prevMember);
-		prevEl.scrollIntoView();
-		prevMember--;
-		nextMember++;
-	} else {
-		prevMember = tech_members.length;
-		var prevEl = document.getElementById('tech-member-'+prevMember);
-		prevEl.scrollIntoView();
-		prevMember--;
-		nextMember = 0;
-	}
+	$('#tech-gallery-row').animate({scrollLeft: ($('#tech-gallery-row').scrollLeft() - $('.team-member').width() - 10)}, 500);
+// 	if(prevMember == tech_members.length-1){
+// 		nextMember = -1;
+// 	}
+// 	if(prevMember == tech_members.length -2){
+// 		prevMember = tech_members.length - 4;
+// 		var prevEl = document.getElementById('tech-member-'+prevMember);
+// 		prevEl.scrollIntoView();
+// 		prevMember--;
+// 		nextMember++;
+// 	} else if(prevMember >= 0){
+// 		var prevEl = document.getElementById('tech-member-'+prevMember);
+// 		prevEl.scrollIntoView();
+// 		prevMember--;
+// 		nextMember++;
+// 	} else {
+// 		prevMember = tech_members.length;
+// 		var prevEl = document.getElementById('tech-member-'+prevMember);
+// 		prevEl.scrollIntoView();
+// 		prevMember--;
+// 		nextMember = 0;
+// 	}
+}
+
+function goToNextCore() {
+	$('#core-gallery-row').animate({scrollLeft: $('#core-gallery-row').scrollLeft() + $('.team-member').width() + 10}, 500);
+}
+
+function goToPrevCore() {
+	$('#core-gallery-row').animate({scrollLeft: ($('#core-gallery-row').scrollLeft() - $('.team-member').width() - 10)}, 500);
 }
