@@ -240,53 +240,10 @@ function closeMember() {
 
 function goToNextMember() {
 	$('#tech-gallery-row').animate({scrollLeft: $('#tech-gallery-row').scrollLeft() + $('.team-member').width() + 10}, 500);
-	// $(function(){document.getElementById('tech-gallery-row').scrollLeft += $('.team-member').width();});
-	// if(nextMember == 4){
-	// 	prevMember = 1;
-	// }
-	// if(nextMember == 1){
-	// 	nextMember =4;
-	// 	var nextEl = document.getElementById('tech-member-'+nextMember);
-	// 	nextEl.scrollIntoView({behavior: 'smooth'});
-	// 	nextMember++;
-	// 	prevMember =0;
-	// } else if(nextMember < tech_members.length){
-	// 	var nextEl = document.getElementById('tech-member-'+nextMember);
-	// 	nextEl.scrollIntoView({behavior: 'smooth'});
-	// 	nextMember++;
-	// 	prevMember--;
-	// } else {
-	// 	nextMember = 0;
-	// 	var nextEl = document.getElementById('tech-member-'+nextMember);
-	// 	nextEl.scrollIntoView({behavior: 'smooth'});
-	// 	nextMember++;
-	// 	prevMember = tech_members.length;
-	// }
 }
 
 function goToPreviousMember() {
 	$('#tech-gallery-row').animate({scrollLeft: ($('#tech-gallery-row').scrollLeft() - $('.team-member').width() - 10)}, 500);
-// 	if(prevMember == tech_members.length-1){
-// 		nextMember = -1;
-// 	}
-// 	if(prevMember == tech_members.length -2){
-// 		prevMember = tech_members.length - 4;
-// 		var prevEl = document.getElementById('tech-member-'+prevMember);
-// 		prevEl.scrollIntoView();
-// 		prevMember--;
-// 		nextMember++;
-// 	} else if(prevMember >= 0){
-// 		var prevEl = document.getElementById('tech-member-'+prevMember);
-// 		prevEl.scrollIntoView();
-// 		prevMember--;
-// 		nextMember++;
-// 	} else {
-// 		prevMember = tech_members.length;
-// 		var prevEl = document.getElementById('tech-member-'+prevMember);
-// 		prevEl.scrollIntoView();
-// 		prevMember--;
-// 		nextMember = 0;
-// 	}
 }
 
 function goToNextCore() {
