@@ -40,11 +40,9 @@
     model += member.email+'<br/>';
     model += member.mobile+'<br/>';
     model += '<div class="row">';
-
-    model += '<a href="'+member.linkedin+'"><img src="images/logo_linkedin.png" id="social-media"></a>';
-    model += '<a href="'+member.facebook+'"><img src="images/logo_fb.png" id="social-media"></a>'
+    model += '<a href="'+member.linkedin+'" rel="nofollow"><img src="images/logo_linkedin.png" id="social-media" alt="linkedin logo"></a>';
+    model += '<a href="'+member.facebook+'" rel="nofollow"><img src="images/logo_fb.png" id="social-media" alt="fb logo"></a>'
     model += '</div></div></div></div>';
-
     return model;
   }
 
