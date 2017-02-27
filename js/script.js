@@ -42,7 +42,7 @@ function init(){
 }
 
 var url = 'https://script.google.com/macros/s/AKfycbytrKHv5A3eUMBuN-SwT0o8ZBPy05cg-4mTQULBVjlAhb2he18/exec';
-
+/*
 function validateEmail(email) {
     var x = email;
     var atpos = x.indexOf("@");
@@ -93,6 +93,7 @@ function ctrlq(e) {
 	$('#msg').val("");
 	Materialize.toast("Thanks for contacting us, we will get to you soon :)", 3000 );
 }
+*/
 
 function menu_handler() {
 
