@@ -7,21 +7,17 @@ function init(){
 				$('.home-text').css({'margin-top': '0', 'opacity': '1'});
 				$('.navblocks').css({'margin-top': '0', 'opacity': '1'});
 				$('.container').css({'margin-top': '0', 'opacity': '1'});
-
 				$('.materialboxed').materialbox();
 				$('.slider').slider({indicators: false, transition: 1000, interval: 4000});
 				$('.slider').slider('start');
+				$('.menu_ic').on('click', menu_handler);
 				}, 100);       
 				console.log("External content loaded successfully!");
 		 }if(statusTxt == "error")
 	            console.log("Error: " + xhr.status + ": " + xhr.statusText);
     });
     });
-	 $(function(){$('.footer').load('footer.html')}); 
-	setTimeout(function(){
-		menu_ic = document.getElementsByClassName('menu_ic')[0];
-		menu_ic.onclick = menu_handler;
-	}, 100);
+	 $(function(){$('.footer').load('footer.html')});  
 	
 	$(function(){
 		$('.header').load('header.html');
@@ -57,7 +53,7 @@ function sendMail(){
 	var name = $('#name').val();
 	var email = $('#email').val();
 	var msg = $('#msg').val();
-	if(name.lenght==0 || email.lenght==0 || msg.length==0){
+	if(name.length==0 || email.length==0 || msg.length==0){
 		Materialize.toast("Please fill all the details!", 3000 );
 		return;
 	}
@@ -112,7 +108,9 @@ function menu_handler() {
 
 	menu.style.top = y-25+'px';
 	menu.style.right = y-25+'px';
-	 $(function(){menu.style.transform = 'scale(20)';});
+	setTimeout(function(){
+		$(function(){menu.style.transform = 'scale(20)';});
+	}, 10);
 	
 	$('.close').on('click', close_menu);
 	
@@ -138,4 +136,121 @@ function close_menu() {
 		menu_container.style.display = 'none';
 		$('.menu').remove();
 	}, 300);		
+}
+
+var cardTop;
+var cardLeft;
+
+function initializeTeamMembers() {
+	$('.next').on('click', goToNextMember);
+	$('.prev').on('click', goToPreviousMember);
+	$('.next-core').on('click', goToNextCore);
+	$('.prev-core').on('click', goToPrevCore);
+	nextMember = 4;
+	prevMember = tech_members.length-1;
+	var ids = "#core-member-";
+	for(i = 0; i < core_members.length; i++) {
+		$(ids+i).on('click', function(e){
+			if($(e.target).is('img')){
+				e.preventDefault();
+				return;
+			}
+			displayMemberInfo.bind(this).call();
+		});
+	}
+	ids = "#tech-member-";
+	for(i = 0; i < tech_members.length; i++) {
+		$(ids+i).on('click', function(e){
+			if($(e.target).is('img')){
+				e.preventDefault();
+				return;
+			}
+			displayMemberInfo.bind(this).call();
+		});
+	}
+}
+
+function displayMemberInfo() {
+	var card = document.createElement('div');
+	card.className = 'expandable-card';
+	var w = $(this).find('.card-content').width();
+	var h = $(this).find('.card-content').height();
+	var t = $(this).find('.team-member-bg').offset().top;
+	t -= $(window).scrollTop();
+	cardTop = t;
+	var l = $(this).find('.team-member-bg').offset().left;
+	cardLeft = l;
+	var htmlc = '<div class="expandable-card-contents center">' + $(this).find('.card-content').html() + '</div>';
+
+	$('body').append(card);
+	$('.expandable-card').append(htmlc);
+	$('.expandable-card-contents').css({
+		margin: '10px 10px 0 0', 
+		position: 'fixed',
+		height: h,
+		width: w,
+		top: t,
+		left: l,
+		backgroundColor: '#fff'
+	});
+	setTimeout(function(e){
+	$(function() {
+		$('.expandable-card').css({			
+			position: 'fixed',
+			top: '0',
+			left: '0',
+			width: '100vw',
+			height: '100vh',
+			backgroundColor: 'rgba(0, 0, 0, 0.6)',
+			zIndex: 2
+		});
+		$('.expandable-card-contents').css({
+			position: 'fixed',
+			height: '60vh',
+			width: '70vw',
+			left: '15vw',
+			top: '20vh',
+			zIndex: 2
+		});
+		setTimeout(function(){
+			$('.expandable-card').find('.team-member-info').css('display', 'inherit');
+		}, 300);
+	});
+	}, 10);
+	$('.expandable-card').on('click', closeMember);
+}
+
+function closeMember() {
+	$(function() {
+		$('.expandable-card').find('.team-member-info').css('display', 'none');
+		var h = $('.card-content').height();
+		var w = $('.card-content').width();
+		$('.expandable-card-contents').css({
+			position: 'fixed',
+			height: h,
+			width: w,
+			top: cardTop,
+			left: cardLeft
+		});
+		setTimeout(function(){
+			$('.expandable-card-contents').remove();
+			$('.expandable-card').remove();
+		}, 400);
+	});
+}
+
+function goToNextMember() {
+	$('#tech-gallery-row').animate({scrollLeft: $('#tech-gallery-row').scrollLeft() + $('.team-member').width() + 10}, 500);
+}
+
+function goToPreviousMember() {
+	$('#tech-gallery-row').animate({scrollLeft: ($('#tech-gallery-row').scrollLeft() - $('.team-member').width() - 10)}, 500);
+}
+
+function goToNextCore() {
+	$('#core-gallery-row').animate({scrollLeft: $('#core-gallery-row').scrollLeft() + $('.team-member').width() + 10}, 500);
+}
+
+function goToPrevCore() {
+	$('#core-gallery-row').animate({scrollLeft: ($('#core-gallery-row').scrollLeft() - $('.team-member').width() - 10)}, 500);
 }

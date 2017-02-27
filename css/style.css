@@ -110,6 +110,7 @@ body{
 .team-member {
 	display: block;
 	padding: 5px !important;
+	width: 20vw;
 }
 
 .team-member .card-content {
@@ -132,6 +133,56 @@ body{
 	width: 50px !important;
 	height: 50px !important;
 	margin: 10px !important;
+}
+
+.team-member-info {
+	display: none;
+	transition: opacity .4s ease-in-out;
+}
+
+.expandable-card #social-media {
+	width: 50px !important;
+	height: 50px !important;
+	margin: 10px !important;	
+}
+
+#core-gallery-row {
+	display: flex;
+	width: 80%;
+}
+
+#tech-gallery-row {
+	margin-left: 0%;
+	display: flex;
+	width: 80%;
+	overflow-x: scroll;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+}
+
+#tech-gallery-row::-webkit-scrollbar, #core-gallery-row::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+
+
+.gallery {
+	display: inline-block;
+}
+
+.expandable-card img {
+	display: inline-block;
+	width: 120px;
+	height: 120px;	
+}
+
+.expandable-card, .expandable-card-contents {
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+}
+
+.next-core, .prev-core {
+	display: none;
 }
 
 .timeline-content .card-title {
@@ -219,7 +270,7 @@ body{
 		top: 0;
 		left: 0;	
 		width: 100%;
-		height: 35%;
+		height: 50%;
 		border-radius: 1px;
 	}
 	
@@ -275,5 +326,21 @@ body{
 
 	.link {
 		margin-bottom: 20px !important;
+	}
+	
+	#core-gallery-row {
+		overflow-x: scroll;
+	}
+
+	.team-member {
+		width: 80vw;
+	}
+	
+	.next-core, .prev-core {
+		display: inline-block;
+	}
+
+	.button-container {
+		display: inline-block;
 	}
 }

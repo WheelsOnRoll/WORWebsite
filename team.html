@@ -30,18 +30,20 @@
 
   function get_model(member){
     var model = "";
-    model += '<div class="team-member col s12 m6 l6"><div class="card center-align">';
+    model += '<div class="team-member"><div class="card center-align">';
     model += '<div class="card-content">';
     model += '<div class="team-member-bg green"></div>';
     model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
-    model += '<h4>'+member.name+'</h4>';
+    model += '<h6><b>'+member.name+'</b></h6>';
+    model += '<div class="team-member-info">'
     model += member.position+'<br/><br/>';
     model += member.email+'<br/>';
     model += member.mobile+'<br/>';
     model += '<div class="row">';
-    model += '<a href="'+member.linkedin+'" rel="nofollow"><img src="images/logo_linkedin.png" id="social-media" alt="linkedin logo"></a>';
-    model += '<a href="'+member.facebook+'" rel="nofollow"><img src="images/logo_fb.png" id="social-media" alt="fb logo"></a>'
-    model += '</div></div></div>';
+
+    model += '<a href="'+member.linkedin+'"><img src="images/logo_linkedin.png" id="social-media"></a>';
+    model += '<a href="'+member.facebook+'"><img src="images/logo_fb.png" id="social-media"></a>'
+    model += '</div></div></div></div>';
 
     return model;
   }
@@ -51,23 +53,21 @@
     // Core members
     var gallery_row;
     gallery_container.innerHTML += '<h2 class="label">Founding Team</h2>';
+    gallery_container.innerHTML += '<div id="core-gallery-row"></div>';
+    gallery_row = document.getElementById('core-gallery-row');
     for(var i=0;i<core_members.length;i++){
-      if(i%2==0){
-        gallery_container.innerHTML += '<div class="row" id="core-gallery-row-'+i+'"></div>';
-        gallery_row = document.getElementById('core-gallery-row-'+i);
-      }
       var member = core_members[i];
       gallery_row.innerHTML += '<div class="gallery" id="core-member-'+i+'"></div>';
       var member_container = document.getElementById('core-member-'+i);
       member_container.innerHTML += get_model(member);
     }
+    gallery_container.innerHTML += '<div class="center button-container"><a class="prev-core btn-floating btn-large waves-effect waves-light green"><i class="material-icons">chevron_left</i></a>';
+    gallery_container.innerHTML += '<a class="next-core btn-floating btn-large waves-effect waves-light green"><i class="material-icons">chevron_right</i></a></div>';
     // Tech Members
     gallery_container.innerHTML += '<h2 class="label">Tech Team</h2>';
+    gallery_container.innerHTML += '<div  id="tech-gallery-row"></div>';
+    gallery_row = document.getElementById('tech-gallery-row');
     for(var i=0;i<tech_members.length;i++){
-      if(i%2==0){
-        gallery_container.innerHTML += '<div class="row" id="tech-gallery-row-'+i+'"></div>';
-        gallery_row = document.getElementById('tech-gallery-row-'+i);
-      }
       var member = tech_members[i];
       gallery_row.innerHTML += '<div class="gallery" id="tech-member-'+i+'"></div>';
       var member_container = document.getElementById('tech-member-'+i);
@@ -78,13 +78,15 @@
   <script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body onload="init(); load_members();">
+<body onload="init(); load_members(); initializeTeamMembers();">
     
   <div class="header"></div>
   <center>
 
-    <div class="container" id="gallery">
+    <div class="team-container" id="gallery">
     </div>
+    <a class="btn-floating btn-large waves-effect waves-light green"><i class="prev material-icons">chevron_left</i></a>
+    <a class="btn-floating btn-large waves-effect waves-light green"><i class="next material-icons">chevron_right</i></a>
   
   </center>
 
