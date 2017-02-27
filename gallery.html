@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Wheels On Roll - Gallery</title>
-  
+  <meta name="description" content="Photos of the Wheels On Roll team">
+  <meta name="keywords" content="Wheels On Roll, Cycle, Rental, Cycle Services, Digital, WOR,campus,demand,affordable, Photos, Pictures, Images, Team Photos">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -14,13 +15,12 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <script type="text/javascript" src="js/gallery.json"></script>
-  <script type="text/javascript" src="js/script.js"></script>
 
   <script type="text/javascript">
 
   function get_image(member) {
     var image = "";
-    image += '<div class="member col s12 m6 l6">';
+    image += '<div class="member ">';
     image += '<div class="card-content">';
     image += '<div class="member-bg-green">'
     image += '<img src="'+member+'" class="material-boxed z-depth-2" style="padding:0;">';
@@ -33,17 +33,18 @@
     var gallery_row;
     gallery_container.innerHTML += '<h2 class="label">Photos</h2>';
     for(var i=0;i<images.length;i++){
-      if(i%2==0){
+      if(i%2 == 0){
         gallery_container.innerHTML += '<div class="row" id="gallery-row-'+i+'"></div>';
         gallery_row = document.getElementById('gallery-row-'+i);
       }
       var member = images[i];
-      gallery_row.innerHTML += '<div class="gallery" id="member-'+i+'"></div>';
+      gallery_row.innerHTML += '<div class="gallery col s12 m6 l6" id="member-'+i+'"></div>';
       var member_container = document.getElementById('member-'+i);
       member_container.innerHTML += get_image(member);
     }
   }
   </script>
+  <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body onload="init(); load_images();">

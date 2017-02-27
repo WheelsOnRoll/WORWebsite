@@ -3,5 +3,6 @@ var images = [
 	"images/carousel_image_2.jpg",
 	"images/carousel_image_3.jpg",
 	"images/carousel_image_4.jpg",
-	"images/carousel_image_5.jpg"
+	"images/carousel_image_5.jpg",
+	"images/carousel_image_6.jpg",	
 ]
