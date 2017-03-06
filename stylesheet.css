@@ -21,7 +21,7 @@ section.timeline-outer {
 }
 
 h1.header {
-  font-size: 50px;
+  font-size: 45px;
   line-height: 70px;
 }
 /* Timeline */
@@ -44,7 +44,7 @@ h1.header {
 .timeline h1,
 .timeline h2,
 .timeline h3 {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 .timeline .event {
@@ -58,7 +58,7 @@ h1.header {
   padding-bottom: 0;
   margin-bottom: 0;
   border: none;
-}
+
 
 .timeline .event:before,
 .timeline .event:after {
@@ -74,7 +74,7 @@ h1.header {
   text-align: right;
   /*  font-weight: 100;*/
   
-  font-size: 16px;
+  font-size: 13px;
   min-width: 120px;
 }
 
@@ -115,17 +115,17 @@ Responsive Stuff
     left: 0.5px;
     top: 20px;
     min-width: 0;
-    font-size: 13px;
+    font-size: 11px;
   }
   .timeline h3 {
-    font-size: 16px;
+    font-size: 11px;
   }
   .timeline p {
     padding-top: 20px;
   }
   section.lab h3.card-title {
     padding: 5px;
-    font-size: 16px
+    font-size: 11px
   }
 }
 
@@ -134,7 +134,7 @@ Responsive Stuff
     left: 0.5px;
     top: 20px;
     min-width: 0;
-    font-size: 13px;
+    font-size: 12px;
   }
   .timeline .event:nth-child(1)::before,
   .timeline .event:nth-child(3)::before,
@@ -142,7 +142,7 @@ Responsive Stuff
     top: 38px;
   }
   .timeline h3 {
-    font-size: 16px;
+    font-size: 13px;
   }
   .timeline p {
     padding-top: 20px;
@@ -189,7 +189,7 @@ a.portfolio-link {
 .card-content
 {
   font-style: "Browallia New" ;
-  font-size: 1.3em;
+  font-size: 1.35em;
 }
 .timeline .timeline-event::after {
   display: block;
@@ -232,7 +232,7 @@ a.portfolio-link {
 }
 
 .timeline .timeline-badge i {
-  font-size: 25px;
+  font-size: 22px;
   line-height: 40px;
 }
 
