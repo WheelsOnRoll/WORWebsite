@@ -70,7 +70,7 @@
 }
 
 .timeline .timeline-badge i {
-  font-size: 25px;
+  font-size: 16px;
   line-height: 40px;
 }
 
@@ -86,6 +86,7 @@
   }
   .timeline .timeline-event:nth-child(even) .timeline-content {
     margin-left: 70px;
+
   }
   .timeline .timeline-event:nth-child(odd) .timeline-content {
     margin-left: 70px;
