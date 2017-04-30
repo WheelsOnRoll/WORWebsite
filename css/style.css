@@ -241,7 +241,7 @@ body {
 	padding: 5px;
 }
 
-.footer-icons img {
+.social-media-logo{
 	height: 35px;
 	width: 35px;
 }
@@ -354,7 +354,7 @@ body {
 		display: inline-block;
 	}
 
-	.footer-icons img {
+	.social-media-logo {
 		height: 20px;
 		width: 20px;
 	}
