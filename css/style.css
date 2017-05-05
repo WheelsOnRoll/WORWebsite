@@ -225,7 +225,7 @@ body {
 
 .member img {
 	width: 100%;
-	padding: 5px;
+	padding: 15px 0px 5px 0px;  
 }
 
 .footer-email i {
@@ -234,6 +234,16 @@ body {
 
 .menu_ic {
 	display: none !important;
+}
+
+.footer-icons {
+	display: inline-block;
+	padding: 5px;
+}
+
+.social-media-logo{
+	height: 35px;
+	width: 35px;
 }
 
 @media only screen and (max-width : 720px) {
@@ -342,5 +352,10 @@ body {
 
 	.button-container {
 		display: inline-block;
+	}
+
+	.social-media-logo {
+		height: 20px;
+		width: 20px;
 	}
 }
